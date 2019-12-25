@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,27 +33,28 @@
         /* Scrollable contents if viewport is shorter than content. */
     }
     </style>
-    
+
 </head>
+
 <body>
 
-<div class="container-md bg-dark" >
-<div class="sidebar-sticky">
-<table class="table table-hover  
+    <div class="container-md bg-dark">
+        <div class="sidebar-sticky">
+            <table class="table table-hover  
                             table-striped table-sm table-responsive-sm" id="datatable" style="text-align: center;">
-                            <!--teble-->
-                            <thead>
-                                <tr class=" bg-success ">
-                                    <th scope="col">id</th>
-                                    <th scope="col">username</th>
-                                    <th scope="col">Device</th>
-                                    <th scope="col">IMEI</th>
-                                    <th scope="col">date</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
+                <!--teble-->
+                <thead>
+                    <tr class=" bg-success ">
+                        <th scope="col">id</th>
+                        <th scope="col">username</th>
+                        <th scope="col">Device</th>
+                        <th scope="col">IMEI</th>
+                        <th scope="col">date</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                                     $i = 1;
                                     foreach($door as $c){
                                     echo"<tr class='table-success'> ";
@@ -67,12 +69,12 @@
                                     }
                         
                                     ?>
-                            </tbody>
-                        </table>
-</div>
-</div>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -83,6 +85,7 @@
     </script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    
+
 </body>
+
 </html>

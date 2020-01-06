@@ -23,7 +23,7 @@ if (!$objResult) {
 	
 	$namedoor = $objResult["namedoor"];
 	$IMEI = $objResult["IMEI"];
-    echo "OK'".$namedoor."'     '".$IMEI."'";
+    echo "OK'".$namedoor."'       '".$IMEI."'";
 	
 
    
@@ -44,7 +44,7 @@ if (!$objResult) {
 	//echo $doordata;
 	//echo $imei;
 	//echo $Phone;
-	echo " Device ".$Phone;
+	echo " Device: ".$Phone." User :".$name;
 	//echo "OK'".$namedoor."'     '".$IMEI."''".$Phone."'""'".$name."'"";
 	
 	

@@ -5,6 +5,7 @@
         $select = $db->query('SELECT*FROM Usagehistory');
         $door = $select->fetchAll();
         
+        
     } catch (Exception $e){
             echo "can not connect to database";
             throw new Exception($e);

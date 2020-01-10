@@ -54,9 +54,8 @@ if (!$objResult) {
 	$SQLinsert="INSERT INTO Usagehistory (username, Device, Door, IMEI, date, id) VALUES ('" . $name . "', '". $Phone ."', '". $doordata ."', '". $imei ."', CURRENT_TIMESTAMP, NULL)";
 	$objQuery2 = mysqli_query($objCon,$SQLinsert);
 	mysqli_close($objCon);
-	
-
 }
 
 $conn->close();
+
 ?>

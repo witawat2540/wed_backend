@@ -49,6 +49,7 @@
                         <th scope="col">username</th>
                         <th scope="col">Device</th>
                         <th scope="col">IMEI</th>
+                        <th scope="col">IMEI</th>
                         <th scope="col">date</th>
 
                     </tr>
@@ -62,6 +63,7 @@
                                     echo"<td>$c[username]</td>";
                                     echo"<td>$c[Device]</td>";
                                     echo"<td>$c[IMEI]</td>";
+                                    echo"<td>$c[Door]</td>";
                                     echo"<td>$c[date]</td>";
                                     
                                     echo"</tr> ";

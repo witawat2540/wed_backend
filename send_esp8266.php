@@ -13,7 +13,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $val = $_GET['status'];
-$coe = md5("coesmartlock '".$val."'");
 $sql = "UPDATE status SET Status = '" . $val . "' WHERE id = 1";
 $objQuery = mysqli_query($conn,$sql);
 //objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);

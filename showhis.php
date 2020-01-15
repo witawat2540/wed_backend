@@ -38,7 +38,7 @@
 
 <body>
 
-    <div class="container-md bg-dark">
+    <div class="container-fluid-md " style="background:#2a2a2a;">
         <div class="sidebar-sticky">
             <table class="table table-hover  
                             table-striped table-sm table-responsive-sm" id="datatable" style="text-align: center;">

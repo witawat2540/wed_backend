@@ -16,5 +16,17 @@ $val = $_GET['status'];
 $sql = "SELECT * FROM status WHERE id = 1";
 $objQuery = mysqli_query($conn,$sql);
 $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
-echo $objResult['Status'];
+	
+    	
+    $sqldoor = "SELECT * FROM Usagehistory WHERE id = ( SELECT MAX(id) FROM Usagehistory)";	
+	$objQuerydoor = mysqli_query($conn,$sqldoor);	
+    $door = mysqli_fetch_array($objQuerydoor,MYSQLI_ASSOC);	
+    $name= $door['Door'];
+    
+    $sqliddoor = "SELECT * FROM Namedoor WHERE door = '".$name."'";	
+	$objQueryiddoor = mysqli_query($conn,$sqliddoor);	
+    $iddoor = mysqli_fetch_array($objQueryiddoor,MYSQLI_ASSOC);	
+    $id= $iddoor['id'];
+
+echo $id. $objResult['Status'] ;
 ?>

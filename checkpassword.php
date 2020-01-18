@@ -23,7 +23,7 @@ if (!$objResult) {
 	
 	$namedoor = $objResult["namedoor"];
 	$IMEI = $objResult["IMEI"];
-    echo "OK'".$namedoor."'       '".$IMEI."'\n";
+    echo "OK" .$namedoor."       ".$IMEI."\n";
 	
 
    

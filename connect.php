@@ -2,7 +2,7 @@
     try{
 
         $db = new PDO('mysql:host=localhost; dbname=iot; ','iot','!Qazxsw2');
-        $select = $db->query('SELECT*FROM Usagehistory');
+        $select = $db->query('SELECT*FROM Usagehistory ORDER BY id DESC');
         $door = $select->fetchAll();
         
         

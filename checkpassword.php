@@ -6,6 +6,7 @@ $username = "iot";
 $password = "!Qazxsw2";
 $dbname = "iot";
 
+
 // Create connection
 $conn = new mysqli($servername, $username,$password, $dbname);
 // Check connection
@@ -13,12 +14,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $val = $_GET['Password'];
-$coe = md5("coesmartlock '".$val."'");
+$pass = "coesmartlock".$val;
+$coe = hash('sha512',$pass);
+
 $sql = "SELECT * FROM passdoor WHERE  passdoor = '" . $coe . "'";
 $objQuery = mysqli_query($conn,$sql);
 $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
 if (!$objResult) {
     echo "no";
+echo $coe;
 } else {
 	
 	$namedoor = $objResult["namedoor"];

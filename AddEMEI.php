@@ -10,14 +10,13 @@ $con = mysqli_connect(HOST,USER,PASS,DB) or die('Unable to Connect'); //ต่�
 //$con = mysqli_connect(HOST,USER,PASS,DB) or die('Unable to Connect'); //ต่อฐานข้อมูล
 
 mysqli_set_charset($con,"utf8");
-if (isset($_POST)){
-    if ($_POST['isAdd'] == 'true'){
         $Name = $_POST['name'];
         $Pass = $_POST['pass'];
         $Imei = $_POST['IMEI'];
-        $coe = md5("coesmartlock '".$Pass ."'");
+        $val = "coesmartlock".$Pass;
+        $coe = hash('sha512',$val);
     
-    echo $coe;
+    
     
 
         $sql  = "INSERT INTO  passdoor(namedoor,passdoor,IMEI) VALUES ('" . $Name . "','". $coe ."','". $Imei ."')";
@@ -26,8 +25,6 @@ if (isset($_POST)){
         
 
 	
-    }
-}
     mysqli_close($con);
 
 

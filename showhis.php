@@ -49,14 +49,14 @@
                         <th scope="col">username</th>
                         <th scope="col">Device</th>
                         <th scope="col">IMEI</th>
-                        <th scope="col">IMEI</th>
+                        <th scope="col">Door</th>
                         <th scope="col">date</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                                    $i = 1;
+                                     
                                     foreach($door as $c){
                                     echo"<tr class='table-success'> ";
                                     echo"<td>$c[id]</td>";
@@ -66,8 +66,7 @@
                                     echo"<td>$c[Door]</td>";
                                     echo"<td>$c[date]</td>";
                                     
-                                    echo"</tr> ";
-                                    $i++;    
+                                    echo"</tr> ";    
                                     }
                         
                                     ?>
